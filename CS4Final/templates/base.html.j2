@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="static/logo.jpg" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- font statement from w3 schools -->
+    <link href= "https://fonts.googleapis.com/css?family=Open%20Sans" rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="static/style.css" >
+  {% block head %} {% endblock %}
+  </head>
+  <body>
+    <!-- navigation bar taken from https://getbootstrap.com/docs/4.0/components/navbar/ -->
+    <nav class="navbar navbar-expand-lg sticky-top w-100">
+      <div class = "navbar-brand text-light pl-md-2" > MoviePicker </div>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link text-light" href="/JerryChen/finalproject/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="search">Search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="add"> Add a Movie</a>
+        </li>
+        <li class="nav-item">
+          {% if username != None and username != ""%}
+            <div class="nav-link text-light"> Welcome, {{username}}! </div>
+          {% else %}
+            <a class="nav-link text-light" href="login"> Login </a>
+          {% endif %}
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="logout"> Logout </a>
+        </li>
+      </ul>
+    </nav>
+    {% block body %} {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,42 @@
+{% extends "base.html.j2" %}
+{% block head %}
+<title> MoviePicker </title>
+{% endblock %}
+{% block body %}
+  <!-- taken from https://getbootstrap.com/docs/4.0/examples/product/ -->
+  <div class= "position-relative text-center banner">
+    <div class="text-white centered">
+      <h1 class="display-4 font-weight-normal">Search for Movies</h1>
+      <p class="lead font-weight-normal">Countless movies inputted and recommended by your fellow Lakeside classmates. Satisfaction guaranteed!</p>
+      <a class="btn btn-outline-light" href="search"> Go! </a>
+    </div>
+  </div>
+  <div class="d-md-flex px-md-3 pt-3">
+    <div class="bg-dark mx-md-2 py-md-5 w-50 pr-md-3 text-center text-white rounded-lg">
+      <div class="my-3">
+        <h2 class="display-5"> About </h2>
+        <p class="lead px-md-5"> This website is a collection of movies inputted by Lakesiders that are for Lakesiders.
+        The concept behind this is that you should have similar tastes to your peers who go to the same school as you.
+        All of these movies are entered by Lakeside students or faculty, and although the search results can be viewed by all,
+        only Lakesiders with an account can add to this collection. Enjoy! </p>
+      </div>
+    </div>
+    <div class="bg-dark mx-md-2 py-md-5 w-50 pl-md-3 text-center text-white rounded-lg">
+      <div class="my-3 pt-5">
+        <h2 class="display-5"> Try adding a Movie! </h2>
+        <a class="btn btn-outline-light my-md-3" href="add"> Add a Movie! </a>
+      </div>
+    </div>
+  </div>
+  <div class="d-md-flex px-md-3 pt-3 pb-5">
+    <div class="bg-dark mx-md-2 py-md-5 w-100 pr-md-3 text-center text-white rounded-lg">
+      <div class="my-3">
+        <h2 class="display-5"> Statement of Trust </h2>
+        <p class="lead px-md-5"> It is very hard to verify that all of the movies added to this website are actually good, appropriate movies.
+        By accessing this website, whether it be searching or adding movies, you are commiting to using this website responsibly and giving real reviews on real movies you liked.
+        Thanks!</p>
+      </div>
+    </div>
+  </div>
+  <br/>
+{% endblock %}

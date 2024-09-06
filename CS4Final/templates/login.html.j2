@@ -1,0 +1,20 @@
+{% extends "base.html.j2" %}
+{% block head %}
+<title> MoviePicker: Login </title>
+{% endblock %}
+{% block body %}
+  <!-- login code taken from Secure Login mini-lesson https://lakesideblended.learning.powerschool.com/barbara.martin/computerscienceivf21/cms_page/view/61228603-->
+  <div class="text-center">
+    <img class="mb-4" src = "static/logo.jpg" alt="" width="72" height="72">
+    <h3 class="mb-md-4 display-4">Sign In</h3>
+    <form class="form-signin pt-md-3"  method="POST" action="login">
+      <input type="text" name = "username" placeholder="Username" class = "signin"><br/><br/>
+      <input type="password" name = "password" placeholder="Password" class = "signin"><br/>
+      {% if error %}
+        <p class = "text-center text-danger">Incorrect username or password: please try again.</p>
+      {% endif %}
+      <input type="submit" class="btn btn-primary btn-lg mt-md-3" value = "Sign In">
+    </form> <br/>
+    <a href="signup"> Don't have an account? Sign up here! </a>
+  </div>
+{% endblock %}

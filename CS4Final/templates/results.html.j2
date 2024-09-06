@@ -1,0 +1,28 @@
+{% extends "base.html.j2" %}
+{% block head %}
+<title> MoviePicker: Results </title>
+{% endblock %}
+{% block body %}
+  <div class = "pt-5">
+    {% if valid%}
+      <div class = "pt-md-4">
+        <h2 class = "font-italic pl-md-3"> Your Search Results: </h2>
+        {% for movie in results%}
+          <div class = "d-flex flex-row">
+            <div class = "p-4 w-50">
+              <h3> Title: {{movie.title}} </h3>
+              <p> Description: {{movie.description}} </p>
+              <p> Recommendation: {{movie.recommend}} </p>
+              <p> Rating: {{movie.rating}}/10 </p>
+            </div>
+            <div class = "p-4">
+              <img src = {{movie.img}} class = "img-fluid rounded inline-block float-right" width = 200 height = 300 alt = "movie-poster">
+            </div>
+          </div>
+        {% endfor %}
+      {% else%}
+        <p class = "text-center text-danger"> Please go back and check one or more genres to proceed </p>
+      {% endif %}
+      </div>
+  </div>
+{% endblock %}

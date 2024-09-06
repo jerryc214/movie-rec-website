@@ -1,0 +1,66 @@
+.text-center
+{
+  padding-top: 75px;
+}
+
+body
+{
+  background-color: #fffafa;
+  font-family: 'Open Sans';
+  color: #5c554b;
+}
+
+
+.bigText
+{
+  font-size: 20px;
+}
+
+
+.navbar
+{
+  position: fixed;
+  background-color: rgba(0, 0, 0, .55);
+}
+
+
+.nav-item
+{
+  padding-right: 20px;
+  float:right;
+}
+
+.signin
+{
+  height:50px;
+  width:300px;
+}
+
+.banner
+{
+  height: 600px;
+  background-color: black;
+}
+
+
+.centered
+{
+  position: absolute;
+  top: 35%;
+  width: 100%;
+}
+
+/* from w3 schools */
+.position-relative
+{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)), url("https://cdn.wallpapersafari.com/80/17/Y1nXtU.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.bg-light
+{
+  background-color: white;
+}

@@ -1,0 +1,18 @@
+{% extends "base.html.j2" %}
+{% block head %}
+<title> MoviePicker: Movie Added! </title>
+{% endblock %}
+{% block body %}
+  <div class = "text-center">
+    {% if error == 1: %}
+      <p class = "text-danger"> Sorry, but the movie you just entered does not exist, please check your spelling or enter a different movie! </p>
+    {% elif error == 2: %}
+      <p class = "text-danger"> Error: the movie you just entered has already been added, please try another movie! <p>
+    {% elif error == 3%}
+      <pclass = "text-danger"> Error: please enter a valid rating between 1 and 10! </p>
+    {% else: %}
+      <p> Success! Thanks for adding a movie!</p>
+      <p> "{{rec}}" </p>
+    {% endif %}
+  </div>
+{% endblock %}

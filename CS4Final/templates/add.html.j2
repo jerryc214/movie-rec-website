@@ -1,0 +1,29 @@
+{% extends "base.html.j2" %}
+{% block head %}
+<title> MoviePicker: Add a Movie! </title>
+{% endblock %}
+{% block body %}
+  {% if username == None or username == ""%}
+    <h3 class = "text-center text-danger"> Please login or create an account before adding movies </h3>
+  {% else %}
+    <form class = "text-center bigText" method="POST" action="newMovie">
+      What is the name of the movie you want to add? <br/>
+      <input type="text" name="movie" required/> <br/>
+      If you wish, write a short blurb(2-3 sentences), explaining why you would recommend this movie! <br/>
+      <textarea rows = "4" cols = "50" name = "rec"> </textarea> <br/>
+      What genres do you think this movie fits into? <br/>
+      <input type="checkbox" name= "action" /> Action <br/>
+      <input type="checkbox" name= "sci" /> Sci-Fi <br/>
+      <input type="checkbox" name= "fantasy" /> Fantasy <br/>
+      <input type="checkbox" name= "horror" /> Horror <br/>
+      <input type="checkbox" name= "drama" /> Drama <br/>
+      <input type="checkbox" name= "comedy" /> Comedy <br/>
+      <input type="checkbox" name= "romance" /> Romance <br/>
+      <input type="checkbox" name= "animated" /> Animated <br/>
+      <input type="checkbox" name= "thriller" /> Thriller <br/>
+      Rate this movie as best as you can from 1 through 10! <br/>
+      <input type="number" name="rating" max = "10" min = "1" required/> <br/>
+      <input type="submit" value= "Add Movie!" class = "my-md-4"/>
+    </form>
+  {% endif %}
+{% endblock %}

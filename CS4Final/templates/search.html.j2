@@ -1,0 +1,21 @@
+{% extends "base.html.j2" %}
+{% block head %}
+<title> MoviePicker: Search </title>
+{% endblock %}
+{% block body %}
+  <form class = "text-center bigText" method="POST" action="results">
+    What types of movies are you looking for? <br/>
+    <div>
+      <input type="checkbox" name= "action"/> Action
+      <input type="checkbox" name= "sci" /> Sci-Fi <br/>
+      <input type="checkbox" name= "fantasy" /> Fantasy
+      <input type="checkbox" name= "horror" /> Horror <br/>
+      <input type="checkbox" name= "drama" /> Drama
+      <input type="checkbox" name= "comedy" /> Comedy <br/>
+      <input type="checkbox" name= "romance" /> Romance
+      <input type="checkbox" name= "animated" /> Animated <br/>
+      <input type="checkbox" name= "thriller" /> Thriller <br/><br/>
+      <input type="submit" class = "mb-md-3" value="Search!" />
+    </div>
+  </form>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html.j2" %}
+{% block head %}
+<title> MoviePicker: Signup </title>
+{% endblock %}
+{% block body %}
+		<div class="text-center">
+			<img class="mb-4" src = "static/logo.jpg" alt="" width="72" height="72">
+			<h3 class="mb-md-2 display-4">Sign Up</h3>
+			<form class="form-signin pt-md-3"  method="POST" action="signup">
+				Enter a Username: <br/>
+				<input type="text" name = "username" placeholder="Username" class = "signin" required><br/><br/>
+				Enter a Password:<br/>
+				<input type="password" name = "password" placeholder="Password" class = "signin" required> <br/><br/>
+				Enter your email:<br/>
+				<input type="email" name = "email" placeholder="Email" class = "signin" required> <br/><br/>
+				{% if error == '1' %}
+					<p class = "text-center text-danger pt-md-3"> Username taken: please try again.</p>
+				{% elif error == '2' %}
+					<p class = "text-center text-danger pt-md-3"> Please enter an username and password </p>
+				{% elif error == '3' %}
+					<p class = "text-center text-danger pt-md-3"> Please enter a vaild Lakeside School email address </p>
+				{% endif %}
+				<input type="submit" class="btn btn-primary btn-lg mt-md-3" value = "Sign Up">
+			</form>
+		</div>
+{% endblock body %}
